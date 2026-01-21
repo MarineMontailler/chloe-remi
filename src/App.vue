@@ -31,6 +31,8 @@ const hebergements = ref([
 
 <template>
   <div class="page">
+    <img src="/src/assets/lovers.png" alt="" class="lovers-img" />
+
     <header class="hero">
       <h1>Chloé & Rémi</h1>
       <p class="date">• 29 Août 2026 • </p>
@@ -61,6 +63,13 @@ const hebergements = ref([
       </ul>
     </section>
 
+    <div class="address">
+      <p>Le Samedi 29 août 2026 à 15h30</p>
+      <p>Au Domaine de Montfriol</p>
+      <p>10 Route de l'Azergues</p>
+      <p>69870 Chambost-Allières</p>
+    </div>
+
     <footer class="footer">
       <p>Merci et à très bientôt ❤️</p>
     </footer>
@@ -69,11 +78,23 @@ const hebergements = ref([
 
 <style scoped>
 .page {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  position: relative;
+  font-family: "Cormorant Garamond", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   max-width: 900px;
   margin: 0 auto;
-  padding: 1.5rem;
-  color: #d19c9c;
+  font-style: italic;
+  color: #000000;
+}
+
+.lovers-img {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 200px;
+
+  @media only screen and (max-width: 576px) {
+    height: 100px;
+  }
 }
 
 .hero {
@@ -82,8 +103,14 @@ const hebergements = ref([
 }
 
 .hero h1 {
+  font-family: "Great Vibes", cursive;
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: #ff6445;
+
+  @media only screen and (max-width: 576px) {
+    font-size: 2rem;
+  }
 }
 
 .date {
@@ -99,7 +126,7 @@ section {
   list-style: none;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
 }
 
@@ -136,9 +163,20 @@ section {
   text-decoration: underline;
 }
 
+.address {
+  font-size: 1.5rem;
+  font-family: "Great Vibes", cursive;
+  /* line-height: 20px; */
+  color: #ff6445;
+
+  p {
+    margin: 0;
+  }
+}
+
 .footer {
+  color: #777;
   text-align: center;
   margin-top: 3rem;
-  color: #777;
 }
 </style>
