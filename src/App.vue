@@ -1,39 +1,3 @@
-<template>
-  <div class="page">
-    <header class="hero">
-      <h1>Marie & Julien</h1>
-      <p class="date">12 juillet 2026 • Bordeaux</p>
-    </header>
-
-    <section class="intro">
-      <h2>Bienvenue</h2>
-      <p>
-        Nous sommes très heureux de partager cette journée avec vous 💍
-        Vous trouverez ci-dessous une sélection de lieux d’hébergement à proximité du lieu de réception.
-      </p>
-    </section>
-
-    <section class="hebergements">
-      <h2>Hébergements à proximité</h2>
-      <ul class="list">
-        <li v-for="lieu in hebergements" :key="lieu.id" class="card">
-          <h3>{{ lieu.nom }}</h3>
-          <p class="adresse">{{ lieu.adresse }}</p>
-          <p>{{ lieu.description }}</p>
-          <p class="distance">📍 {{ lieu.distance }}</p>
-          <a v-if="lieu.site" :href="lieu.site" target="_blank" rel="noopener">
-            Voir le site
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <footer class="footer">
-      <p>Merci et à très bientôt ❤️</p>
-    </footer>
-  </div>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -65,13 +29,51 @@ const hebergements = ref([
 ])
 </script>
 
+<template>
+  <div class="page">
+    <header class="hero">
+      <h1>Chloé & Rémi</h1>
+      <p class="date">• 29 Août 2026 • </p>
+    </header>
+
+    <section class="intro">
+      <h2>Bienvenue</h2>
+      <p>
+        Nous sommes très heureux de partager cette journée avec vous 💍
+      </p>
+      <p>
+        Vous trouverez ci-dessous une sélection de lieux d’hébergement à proximité du lieu de réception.
+      </p>
+    </section>
+
+    <section class="hebergements">
+      <h2>Hébergements à proximité</h2>
+      <ul class="list">
+        <li v-for="lieu in hebergements" :key="lieu.id" class="card">
+          <h3>{{ lieu.nom }}</h3>
+          <p class="adresse">{{ lieu.adresse }}</p>
+          <p>{{ lieu.description }}</p>
+          <p class="distance">📍 {{ lieu.distance }}</p>
+          <a v-if="lieu.site" :href="lieu.site" target="_blank" rel="noopener">
+            Voir le site
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>Merci et à très bientôt ❤️</p>
+    </footer>
+  </div>
+</template>
+
 <style scoped>
 .page {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem;
-  color: #333;
+  color: #d19c9c;
 }
 
 .hero {
