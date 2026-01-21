@@ -5,8 +5,8 @@ const hebergements = ref([
   {
     id: 1,
     nom: 'Hôtel du Parc',
-    adresse: '10 rue des Fleurs, Bordeaux',
-    description: 'Hôtel confortable avec petit-déjeuner inclus.',
+    adresse: '10 rue des Fleurs, Chambost-Allières',
+    description: 'Hôtel confortable',
     distance: '5 minutes en voiture',
     site: 'https://example.com'
   },
