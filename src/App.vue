@@ -226,8 +226,11 @@ const hebergements = ref([
       </ul>
     </section>
 
-    <div class="address">
+    <div class="event-date">
       <p>Le Samedi 29 août 2026 à 15h30</p>
+    </div>
+
+    <div class="address">
       <p>Au Domaine de Montfriol</p>
       <p>10 Route de l'Azergues</p>
       <p>69870 Chambost-Allières</p>
@@ -331,12 +334,18 @@ section {
   text-decoration: underline;
 }
 
-.address {
+.event-date {
   font-size: 1.5rem;
   font-family: "Great Vibes", cursive;
   /* line-height: 20px; */
   color: #ff6445;
 
+  p {
+    margin: 0;
+  }
+}
+
+.address {
   p {
     margin: 0;
   }
